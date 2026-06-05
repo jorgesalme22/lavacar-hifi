@@ -689,86 +689,139 @@ svg.icon {
 .rc-date  { font-size: 0.72rem; color: var(--muted); }
 
 /* ════════════════════════════════════════
-   PRECIOS
+   PRECIOS — sistema de tarjetas
+   Auto-responsive con auto-fit, sin breakpoints
 ════════════════════════════════════════ */
 .page-hero-inner {
   padding: 130px 0 72px;
   background: var(--bg2);
   border-bottom: 1px solid var(--border);
 }
-.price-cat {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--r2);
-  overflow: hidden;
-  margin-bottom: 20px;
-  transition: border-color 0.2s var(--ease);
+
+/* Sección de categoría */
+.psec { }
+.psec + .psec {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
 }
-.price-cat:hover { border-color: var(--border2); }
-.pc-head {
-  display: flex; align-items: center; gap: 14px;
-  padding: 22px 26px;
-  border-bottom: 1px solid var(--border);
+
+/* Cabecera de categoría */
+.psec-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
 }
-.pc-head-icon {
-  width: 42px; height: 42px;
+.psec-icon {
+  width: 36px; height: 36px;
   background: var(--blue-lo);
   border-radius: var(--r);
   display: flex; align-items: center; justify-content: center;
-  color: var(--blue); flex-shrink: 0;
+  color: var(--blue);
+  flex-shrink: 0;
+  margin-top: 2px;
 }
-.pc-head h3 {
+.psec-name {
   font-family: 'Outfit', sans-serif;
-  font-size: 1rem; font-weight: 700;
-  color: var(--white); line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--white); letter-spacing: -0.02em;
+  line-height: 1.2; margin-bottom: 3px;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px;
 }
-.pc-head p { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
-.pc-rows { padding: 4px 0; }
-.pc-row {
-  display: flex; align-items: center;
+.psec-name .badge { margin-left: 0; }
+.psec-desc {
+  font-size: 0.8rem; color: var(--muted);
+  line-height: 1.55; text-wrap: pretty;
+}
+
+/* Grid de tarjetas: se adapta a cualquier ancho sin media queries */
+.psec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+/* Tarjeta individual */
+.pcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.22s var(--ease);
+}
+.pcard:hover { border-color: var(--border2); }
+
+.pcard-name {
+  font-size: 0.91rem; font-weight: 700;
+  color: var(--white); letter-spacing: -0.01em;
+  line-height: 1.35;
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 3px 6px;
+}
+.pcard-name .badge { margin-left: 0; }
+
+.pcard-desc {
+  font-size: 0.8rem; color: var(--muted);
+  line-height: 1.6; flex: 1;
+  text-wrap: pretty;
+}
+
+/* Pie: precio siempre en la base de la tarjeta */
+.pcard-foot {
+  display: flex;
+  align-items: baseline;
   justify-content: space-between;
-  padding: 16px 26px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-  gap: 20px;
-  transition: background 0.15s;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+  flex-wrap: wrap;
 }
-.pc-row:last-child { border-bottom: none; }
-.pc-row:hover { background: rgba(255, 255, 255, 0.018); }
-.pci h4 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 3px; letter-spacing: -0.01em; }
-.pci p  { font-size: 0.78rem; color: var(--muted); }
-.pcp    { text-align: right; flex-shrink: 0; }
-.pcp .val {
+.pcard-val {
   font-family: 'Outfit', sans-serif;
   font-size: 1rem; font-weight: 800;
-  color: var(--white); white-space: nowrap;
-  letter-spacing: -0.02em;
+  color: var(--white); letter-spacing: -0.02em;
+  white-space: nowrap;
 }
-.pcp .note { font-size: 0.75rem; color: var(--muted); margin-top: 2px; } /* min 12px */
+.pcard-note {
+  font-size: 0.73rem; color: var(--muted);
+  text-align: right; line-height: 1.4;
+}
 
+/* Badges */
 .badge {
   display: inline-block;
   font-size: 0.62rem; font-weight: 800;
   letter-spacing: 0.6px; text-transform: uppercase;
   border-radius: 4px; padding: 2px 7px;
-  margin-left: 7px; vertical-align: middle;
 }
 .badge-gold  { background: rgba(245, 158, 11, 0.1); color: var(--gold); }
-.badge-blue  { background: var(--blue-lo); color: #6ea8fe; } /* azul claro: 7:1 en badge bg */
-.badge-green { background: rgba(34, 197, 94, 0.1); color: #4ade80; } /* verde claro con margen */
+.badge-blue  { background: var(--blue-lo); color: #6ea8fe; }
+.badge-green { background: rgba(34, 197, 94, 0.1); color: #4ade80; }
 
+/* Nota inferior y métodos de pago */
 .price-note {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--r2);
   padding: 18px 22px;
   font-size: 0.88rem; color: var(--text);
-  margin-top: 24px; line-height: 1.7;
+  margin-top: 48px; line-height: 1.7;
+  text-wrap: pretty;
 }
-.price-note a { color: var(--white); font-weight: 600; text-decoration: underline; text-decoration-color: var(--blue-md); text-underline-offset: 3px; }
+.price-note a {
+  color: var(--white); font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--blue-md);
+  text-underline-offset: 3px;
+}
 
 .pay-chips {
-  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px;
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px;
 }
 .pay-chip {
   display: flex; align-items: center; gap: 8px;
@@ -1055,67 +1108,7 @@ svg.icon {
   .rb-sep        { display: none; }
   .rb-action     { margin-left: 0; }
 
-  /* ── Precios: móvil portrait ── */
-
-  /* Cabecera de categoría: icono más compacto, texto ajustado */
-  .pc-head {
-    padding: 14px 16px;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .pc-head-icon {
-    width: 34px;
-    height: 34px;
-    margin-top: 2px;
-    flex-shrink: 0;
-  }
-  /* Heading con badge: flex para que el badge no quede solo en línea nueva */
-  .pc-head h3 {
-    font-size: 0.93rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3px 6px;
-    line-height: 1.4;
-  }
-  .pc-head p { font-size: 0.74rem; }
-
-  /* Fila de servicio: columna sin duplicado de regla */
-  .pc-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 14px 16px;
-  }
-  /* Info del servicio: separador visual antes del precio */
-  .pci {
-    width: 100%;
-    padding-bottom: 8px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  /* Heading con badge: igual que pc-head h3 */
-  .pci h4 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3px 6px;
-    line-height: 1.4;
-    margin-bottom: 4px;
-  }
-  .pci h4 .badge,
-  .pc-head h3 .badge { margin-left: 0; }
-
-  /* Precio: en línea con la nota */
-  .pcp {
-    text-align: left;
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .pcp .val { font-size: 0.98rem; }
-  .pcp .note { font-size: 0.72rem; }
+  /* Precios: el grid auto-fit se adapta solo, no necesita overrides */
 
   /* CTA */
   .cta-sec     { padding: 52px 20px; border-radius: var(--r2); }
@@ -1147,22 +1140,5 @@ svg.icon {
   .hero h1        { font-size: 3.2rem; }
   .cta-sec        { padding: 60px 32px; }
 
-  /* Precios: en tablet portrait las filas quedan apretadas en el rango 641–720px */
-  @media (max-width: 720px) {
-    .pc-row {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0;
-      padding: 14px 20px;
-    }
-    .pci {
-      width: 100%;
-      padding-bottom: 8px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .pci h4 { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 6px; line-height: 1.4; }
-    .pci h4 .badge { margin-left: 0; }
-    .pcp { text-align: left; display: flex; align-items: baseline; gap: 8px; }
-  }
+  /* Precios: el grid auto-fit gestiona el responsive automáticamente */
 }
