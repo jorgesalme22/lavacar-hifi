@@ -1055,11 +1055,67 @@ svg.icon {
   .rb-sep        { display: none; }
   .rb-action     { margin-left: 0; }
 
-  /* Precios */
-  .pc-row        { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .pcp           { text-align: left; }
-  .pc-head       { padding: 16px 18px; }
-  .pc-row        { padding: 14px 18px; }
+  /* ── Precios: móvil portrait ── */
+
+  /* Cabecera de categoría: icono más compacto, texto ajustado */
+  .pc-head {
+    padding: 14px 16px;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .pc-head-icon {
+    width: 34px;
+    height: 34px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  /* Heading con badge: flex para que el badge no quede solo en línea nueva */
+  .pc-head h3 {
+    font-size: 0.93rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px 6px;
+    line-height: 1.4;
+  }
+  .pc-head p { font-size: 0.74rem; }
+
+  /* Fila de servicio: columna sin duplicado de regla */
+  .pc-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 14px 16px;
+  }
+  /* Info del servicio: separador visual antes del precio */
+  .pci {
+    width: 100%;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  /* Heading con badge: igual que pc-head h3 */
+  .pci h4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px 6px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .pci h4 .badge,
+  .pc-head h3 .badge { margin-left: 0; }
+
+  /* Precio: en línea con la nota */
+  .pcp {
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .pcp .val { font-size: 0.98rem; }
+  .pcp .note { font-size: 0.72rem; }
 
   /* CTA */
   .cta-sec     { padding: 52px 20px; border-radius: var(--r2); }
@@ -1090,4 +1146,23 @@ svg.icon {
   .footer-grid    { grid-template-columns: 1fr 1fr; }
   .hero h1        { font-size: 3.2rem; }
   .cta-sec        { padding: 60px 32px; }
+
+  /* Precios: en tablet portrait las filas quedan apretadas en el rango 641–720px */
+  @media (max-width: 720px) {
+    .pc-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 14px 20px;
+    }
+    .pci {
+      width: 100%;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .pci h4 { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 6px; line-height: 1.4; }
+    .pci h4 .badge { margin-left: 0; }
+    .pcp { text-align: left; display: flex; align-items: baseline; gap: 8px; }
+  }
 }
