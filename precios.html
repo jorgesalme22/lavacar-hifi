@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Precios Lavacar Hi-Fi Alcalá de Henares. Encerado desde 40€. Lavado, ozono, tapicería, audio y diagnóstico eléctrico. Llama para presupuesto."/>
+  <title>Precios | Lavacar Hi-Fi — Alcalá de Henares</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<!-- SVG sprite icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+  <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6A1 1 0 0 0 12.5 7H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
+    <circle cx="6.5" cy="16.5" r="2.5"/>
+    <circle cx="16.5" cy="16.5" r="2.5"/>
+  </symbol>
+
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.8 19.8 0 0 1 1.63 3.48 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.92z"/>
+  </symbol>
+
+  <symbol id="i-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/>
+    <path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/>
+    <path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/>
+    <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+  </symbol>
+
+  <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+  </symbol>
+
+  <symbol id="i-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    <path d="m9 12 2 2 4-4"/>
+  </symbol>
+
+  <symbol id="i-volume-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+  </symbol>
+
+  <symbol id="i-credit-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+    <line x1="1" y1="10" x2="23" y2="10"/>
+  </symbol>
+
+  <symbol id="i-droplets" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+    <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+  </symbol>
+
+  <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/>
+    <path d="M9.6 4.6A2 2 0 1 1 11 8H2"/>
+    <path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>
+  </symbol>
+
+  <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+    <path d="M5 3v4"/>
+    <path d="M19 17v4"/>
+    <path d="M3 5h4"/>
+    <path d="M17 19h4"/>
+  </symbol>
+
+  <symbol id="i-air-vent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+    <path d="M6 8h12"/>
+    <path d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-1.14-2V12"/>
+    <path d="M6.6 15.6A2 2 0 1 0 10 17v-5"/>
+  </symbol>
+
+  <symbol id="i-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+    <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+    <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>
+  </symbol>
+
+  <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+
+  <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+  </symbol>
+
+  <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="5" y1="12" x2="19" y2="12"/>
+    <polyline points="12 5 19 12 12 19"/>
+  </symbol>
+
+  <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="6"/>
+    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+  </symbol>
+
+  <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+    <line x1="12" y1="18" x2="12.01" y2="18"/>
+  </symbol>
+
+  <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+    <circle cx="12" cy="10" r="3"/>
+  </symbol>
+
+  <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+  </symbol>
+
+  <symbol id="i-external-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+    <polyline points="15 3 21 3 21 9"/>
+    <line x1="10" y1="14" x2="21" y2="3"/>
+  </symbol>
+
+  <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="12" y1="16" x2="12" y2="12"/>
+    <line x1="12" y1="8" x2="12.01" y2="8"/>
+  </symbol>
+
+  <symbol id="i-navigation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+  </symbol>
+
+</svg>
+
+
+<a href="tel:918830326" class="float-btn" aria-label="Llamar ahora">
+  <span class="icon"><svg class="icon" width="18" height="18"><use href="#i-phone"></use></svg></span>
+  <span class="float-btn-text">918 83 03 26</span>
+</a>
+
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark"><svg class="icon" width="20" height="20"><use href="#i-car"></use></svg></div>
+        <div>
+          <div class="logo-name">Lavacar Hi-Fi</div>
+          <div class="logo-sub">Alcalá de Henares</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="precios.html" class="active">Precios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:918830326" class="btn-nav-call">
+          <svg class="icon" width="15" height="15"><use href="#i-phone"></use></svg>
+          918 83 03 26
+        </a>
+        <button class="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" aria-hidden="true">
+  <a href="index.html">Inicio</a>
+  <a href="precios.html">Precios</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="tel:918830326" class="mobile-nav-call">918 83 03 26</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero-inner">
+  <div class="container">
+    <div class="reveal">
+      <span class="sec-tag">Tarifas 2026</span>
+      <h1 class="sec-title" style="font-size:clamp(2.2rem,4vw,3.2rem); margin-top:8px;">Precios transparentes,<br/>sin sorpresas</h1>
+      <p class="sec-sub" style="margin-top:14px;">Los precios se adaptan al tipo y estado de tu vehículo. Llámanos y te damos presupuesto en el momento.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- LAVADO EXTERIOR -->
+    <div class="price-cat reveal">
+      <div class="pc-head">
+        <div class="pc-head-icon"><svg class="icon" width="20" height="20"><use href="#i-droplets"></use></svg></div>
+        <div>
+          <h3>Lavado exterior manual</h3>
+          <p>A mano con productos ecológicos, sin riesgo de arañazos en pintura o carrocería</p>
+        </div>
+      </div>
+      <div class="pc-rows">
+        <div class="pc-row">
+          <div class="pci"><h4>Lavado exterior básico</h4><p>Carrocería, llantas y cristales</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según tipo de vehículo</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Lavado completo + secado a mano</h4><p>Sin marcas de agua, acabado de espejo</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Turismo / SUV / Furgoneta</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Encerado de carrocería <span class="badge badge-gold">Precio fijo</span></h4><p>Protección y brillo duradero para la pintura</p></div>
+          <div class="pcp"><div class="val">Desde 40 €</div><div class="note">Turismo estándar</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Pulido de faros</h4><p>Recupera la transparencia y visibilidad nocturna</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Por par o unidad</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIMPIEZA INTERIOR -->
+    <div class="price-cat reveal">
+      <div class="pc-head">
+        <div class="pc-head-icon"><svg class="icon" width="20" height="20"><use href="#i-wind"></use></svg></div>
+        <div>
+          <h3>Limpieza interior y tapicería</h3>
+          <p>Aspirado, guarnecidos, techo, alfombrillas y tapizados en profundidad</p>
+        </div>
+      </div>
+      <div class="pc-rows">
+        <div class="pc-row">
+          <div class="pci"><h4>Aspirado interior completo</h4><p>Habitáculo, alfombras, tapicería y maletero</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según tamaño del vehículo</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Limpieza de tapicería (tela o cuero)</h4><p>Extracción de manchas y suciedad profunda</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según tipo y estado</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Limpieza de guarnecidos y plásticos</h4><p>Salpicadero, puertas, consola y molduras</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Incluido en pack integral</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Limpieza de techo interior</h4><p>Eliminación de manchas y suciedad del techo</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según estado</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACK INTEGRAL -->
+    <div class="price-cat reveal">
+      <div class="pc-head">
+        <div class="pc-head-icon"><svg class="icon" width="20" height="20"><use href="#i-award"></use></svg></div>
+        <div>
+          <h3>Pack limpieza integral <span class="badge badge-blue">Más vendido</span></h3>
+          <p>Interior completo + exterior + tratamiento adicional. Precio muy competitivo frente a los 150 € de la competencia</p>
+        </div>
+      </div>
+      <div class="pc-rows">
+        <div class="pc-row">
+          <div class="pci"><h4>Pack integral básico</h4><p>Lavado exterior + aspirado + limpieza de guarnecidos</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Referencia: desde 30 €</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Pack integral + desinfección con ozono</h4><p>Todo lo anterior más eliminación de bacterias, virus y alérgenos</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Referencia: 30–120 € según vehículo</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Pack premium — integral + encerado + ozono</h4><p>La limpieza más completa: interior, exterior, pintura y desinfección</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Encerado desde 40 €</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OZONO Y OLORES -->
+    <div class="price-cat reveal">
+      <div class="pc-head">
+        <div class="pc-head-icon"><svg class="icon" width="20" height="20"><use href="#i-shield-check"></use></svg></div>
+        <div>
+          <h3>Ozono, olores y daños por agua</h3>
+          <p>Tratamientos especializados que la mayoría de lavaderos no ofrecen</p>
+        </div>
+      </div>
+      <div class="pc-rows">
+        <div class="pc-row">
+          <div class="pci"><h4>Desinfección con ozono <span class="badge badge-green">Servicio único</span></h4><p>Elimina bacterias, virus y alérgenos sin productos químicos</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Disponible de forma independiente</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Eliminación de olores persistentes</h4><p>Tabaco, mascotas, humedad y materias orgánicas</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según intensidad</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Restauración por daños de agua</h4><p>Intervención urgente en vehículos inundados o con filtraciones</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Presupuesto personalizado</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIO -->
+    <div class="price-cat reveal">
+      <div class="pc-head">
+        <div class="pc-head-icon"><svg class="icon" width="20" height="20"><use href="#i-volume-2"></use></svg></div>
+        <div>
+          <h3>Audio, multimedia y electrónica</h3>
+          <p>Distribuidores e instaladores de equipos de sonido y sistemas multimedia</p>
+        </div>
+      </div>
+      <div class="pc-rows">
+        <div class="pc-row">
+          <div class="pci"><h4>Instalación de equipo de audio</h4><p>Radios, amplificadores, altavoces y subwoofers</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según equipo y vehículo</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Pantalla multimedia / Android Auto / CarPlay</h4><p>Instalación de pantallas táctiles y sistemas de navegación</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Según modelo</div></div>
+        </div>
+        <div class="pc-row">
+          <div class="pci"><h4>Diagnóstico y reparación eléctrica</h4><p>Detección y solución de averías eléctricas del vehículo</p></div>
+          <div class="pcp"><div class="val">Consultar</div><div class="note">Diagnóstico sin compromiso</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-note reveal">
+      <strong>¿Quieres saber el precio exacto para tu vehículo?</strong> Llámanos al <a href="tel:918830326">918 83 03 26</a> o al <a href="tel:912511284">912 51 12 84</a> y en menos de 2 minutos te damos presupuesto personalizado. Atendemos turismos, SUV, furgonetas y vehículos industriales.
+    </div>
+
+    <!-- PAGOS -->
+    <div style="margin-top:64px" class="reveal">
+      <span class="sec-tag">Pago</span>
+      <h2 class="sec-title" style="margin-top:14px; margin-bottom:28px;">Métodos de pago aceptados</h2>
+      <div class="pay-chips">
+        <div class="pay-chip"><span class="icon"><svg class="icon" width="15" height="15"><use href="#i-smartphone"></use></svg></span> Pago móvil NFC</div>
+        <div class="pay-chip"><span class="icon"><svg class="icon" width="15" height="15"><use href="#i-credit-card"></use></svg></span> Tarjeta crédito / débito</div>
+        <div class="pay-chip"><span class="icon"><svg class="icon" width="15" height="15"><use href="#i-credit-card"></use></svg></span> Visa</div>
+        <div class="pay-chip"><span class="icon"><svg class="icon" width="15" height="15"><use href="#i-credit-card"></use></svg></span> Mastercard</div>
+        <div class="pay-chip"><span class="icon"><svg class="icon" width="15" height="15"><use href="#i-credit-card"></use></svg></span> American Express</div>
+        <div class="pay-chip"><span class="icon"><svg class="icon" width="15" height="15"><use href="#i-credit-card"></use></svg></span> Diners Club</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-sec reveal">
+      <h2>¿Listo para el presupuesto?</h2>
+      <p>Llámanos ahora. Te respondemos de inmediato, sin formularios ni esperas.</p>
+      <div class="cta-btns">
+        <a href="tel:918830326" class="btn btn-primary">
+          <svg class="icon" width="17" height="17"><use href="#i-phone"></use></svg>
+          918 83 03 26
+        </a>
+        <a href="tel:912511284" class="btn btn-outline">
+          <svg class="icon" width="17" height="17"><use href="#i-phone"></use></svg>
+          912 51 12 84
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-mark"><svg class="icon" width="20" height="20"><use href="#i-car"></use></svg></div>
+          <div><div class="logo-name">Lavacar Hi-Fi</div><div class="logo-sub">Alcalá de Henares</div></div>
+        </a>
+        <p>Especialistas en lavado manual, limpieza de tapicería, desinfección con ozono e instalación de audio. Más de 25 años en Alcalá de Henares.</p>
+        <div class="footer-rating"><span class="footer-stars">★★★★☆</span><span>4,4 / 5 &nbsp;·&nbsp; 68 reseñas Google</span></div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="precios.html">Lavado manual</a></li>
+          <li><a href="precios.html">Limpieza interior</a></li>
+          <li><a href="precios.html">Encerado</a></li>
+          <li><a href="precios.html">Ozono</a></li>
+          <li><a href="precios.html">Audio y multimedia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horario</h4>
+        <ul>
+          <li><a href="contacto.html">L–V: 8:30–13:30</a></li>
+          <li><a href="contacto.html">L–V: 16:00–20:00</a></li>
+          <li><a href="contacto.html">Sábado: 8:30–13:30</a></li>
+          <li><a href="contacto.html">Domingo: cerrado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:918830326">918 83 03 26</a></li>
+          <li><a href="tel:912511284">912 51 12 84</a></li>
+          <li><a href="contacto.html">C/ Don Juan I, 29</a></li>
+          <li><a href="contacto.html">Alcalá de Henares</a></li>
+          <li><a href="https://instagram.com/lavacarhifi_alcala" target="_blank" rel="noopener">@lavacarhifi_alcala</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Lavacar Hi-Fi &nbsp;·&nbsp; C/ Don Juan I, 29 &nbsp;·&nbsp; 28807 Alcalá de Henares</p>
+      <p>Diseño web profesional</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
